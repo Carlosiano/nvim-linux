@@ -1,5 +1,9 @@
 local keymap = vim.keymap
 
+-- Back to normal mode
+keymap.set('i', 'jj', '<C-c>')
+keymap.set('i', 'kk', '<C-c>')
+
 -- Move to the begining and the end of line
 keymap.set('', 'H', '^')
 keymap.set('', 'L', '$')
@@ -24,8 +28,7 @@ keymap.set('n', 'di', 'daw')
 keymap.set('n', '<C-a>', 'gg<S-v>G')
 
 -- New tab
-keymap.set('n', 'te', ':tabedit ')
-keymap.set('n', 'tn', ':tabedit<CR>', { silent = true })
+keymap.set('n', 'tn', ':tabnew<CR>', { silent = true })
 
 -- Close tab
 keymap.set('n', 'tq', ':q<CR>', { silent = true })
@@ -52,5 +55,5 @@ keymap.set('n', '<C-up>', '<C-w>+')
 keymap.set('n', '<C-down>', '<C-w>-')
 
 -- Save file
+keymap.set('i', '<C-s>', ':w<CR>')
 keymap.set('', '<C-s>', ':w<CR>')
-

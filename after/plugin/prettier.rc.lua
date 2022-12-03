@@ -12,6 +12,8 @@ prettier.setup {
     'typescriptreact',
     'json',
     'scss',
-    'less'
+    'less',
+    'html',
+    'lua'
   }
 }
