@@ -37,6 +37,12 @@ nvim_lsp.tailwindcss.setup {
   cmd = { "tailwindcss-language-server", "--stdio" }
 }
 
+nvim_lsp.intelephense.setup {
+  on_attach = on_attach,
+  filetypes = {"php"},
+  cmd = {"intelephense", "--stdio"}
+}
+
 nvim_lsp.sumneko_lua.setup {
   on_attach = on_attach,
   settings = {

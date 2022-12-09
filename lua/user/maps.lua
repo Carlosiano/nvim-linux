@@ -1,5 +1,7 @@
 local keymap = vim.keymap
 
+vim.g.mapleader = ','
+
 -- Back to normal mode
 keymap.set('i', 'jj', '<C-c>')
 keymap.set('i', 'kk', '<C-c>')
@@ -32,6 +34,7 @@ keymap.set('n', 'tn', ':tabnew<CR>', { silent = true })
 
 -- Close tab
 keymap.set('n', 'tq', ':q<CR>', { silent = true })
+keymap.set('n', '<leader>q', ':q<CR>', { silent = true })
 
 -- Split window
 keymap.set('n', 'ss', ':split<CR><C-w>w', { silent = true })
@@ -47,6 +50,10 @@ keymap.set('', 'sh', '<C-w>h')
 keymap.set('', 'sl', '<C-w>l')
 keymap.set('', 'sk', '<C-w>k')
 keymap.set('', 'sj', '<C-w>j')
+keymap.set('', '<C-h>', '<C-w>h')
+keymap.set('', '<C-l>', '<C-w>l')
+keymap.set('', '<C-k>', '<C-w>k')
+keymap.set('', '<C-j>', '<C-w>j')
 
 -- Resize window
 keymap.set('n', '<C-right>', '<C-w><')
@@ -57,3 +64,5 @@ keymap.set('n', '<C-down>', '<C-w>-')
 -- Save file
 keymap.set('i', '<C-s>', ':w<CR>')
 keymap.set('', '<C-s>', ':w<CR>')
+
+keymap.set('n', '<leader>r', ':lua ReloadConfig()<CR>', {silent = true})
